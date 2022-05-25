@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ObatAlkesController;
+use App\Http\Controllers\RacikanController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SignaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +30,15 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard.index', [
+            'title' => "Dashboard"
+        ]);
+    });
+
+    Route::resource('/obatalkes', ObatAlkesController::class);
+    Route::resource('/signa', SignaController::class);
+    Route::resource('/racikan', RacikanController::class);
+});

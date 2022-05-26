@@ -21,3 +21,13 @@ We assumed you have installed Laravel
     - php artisan serve
 4. Application already running
 ```
+
+## Demo Account
+
+```
+You can free register using feature in this app, or use demo account.
+
+email: wil@gmail.com
+password: 123456
+
+```

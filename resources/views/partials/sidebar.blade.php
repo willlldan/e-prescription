@@ -6,7 +6,7 @@
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fa fa-heartbeat" aria-hidden="true"></i>
             </div>
-            <div class="sidebar-brand-text mx-2">ArsProMedika<sup> &#174;</sup></div>
+            <div class="sidebar-brand-text mx-2">D'Health<sup> &#174;</sup></div>
         </a>
 
         <!-- Divider -->
@@ -22,6 +22,7 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Transaksi</h6>
                     <a class="collapse-item" href="{{ url('/transaksi') }}">Transaksi</a>
+                    <a class="collapse-item" href="{{ url('/transaksi/history') }}">History Transaksi</a>
                 </div>
             </div>
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">

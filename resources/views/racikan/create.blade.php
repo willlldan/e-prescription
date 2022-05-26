@@ -16,12 +16,7 @@
                         <form action="{{ url('/racikan') }}" method="post" id="form-racikan">
                             @csrf
                             <div class="form-group">
-                                <input type="text" placeholder="Nama Racikan" name="racikan_nama" class="form-control form-control-user @error('racikan_nama') is-invalid @enderror" id="racikan_nama" value="{{old('racikan_nama')}}" / autofocus="on" required>
-                                @error('racikan_nama')
-                                <div class="ml-3 invalid-feedback">
-                                    {{ $message}}
-                                </div>
-                                @enderror
+                                <input type="text" placeholder="Nama Racikan" name="racikan_nama" class="form-control form-control-user" id="racikan_nama" autofocus="on" required>
                             </div>
                             <div id="list-obat">
                                 <div class="form-group row" id="form-add-obat">

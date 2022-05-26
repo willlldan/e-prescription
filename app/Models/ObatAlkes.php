@@ -12,4 +12,8 @@ class ObatAlkes extends Model
     protected $guarded = ['obatalkes_id'];
 
     protected $table = 'obatalkes_m';
+
+    protected $primaryKey = 'obatalkes_id';
+
+    public $timestamps = false;
 }

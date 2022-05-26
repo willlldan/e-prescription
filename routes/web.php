@@ -5,6 +5,7 @@ use App\Http\Controllers\ObatAlkesController;
 use App\Http\Controllers\RacikanController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SignaController;
+use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,4 +42,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/obatalkes', ObatAlkesController::class);
     Route::resource('/signa', SignaController::class);
     Route::resource('/racikan', RacikanController::class);
+    Route::get('/transaksi/history', [TransaksiController::class, 'index']);
+    Route::get('/transaksi/{id}/cetak', [TransaksiController::class, 'cetak']);
+    Route::get('/transaksi', [TransaksiController::class, 'create']);
+    Route::post('/transaksi', [TransaksiController::class, 'store']);
 });
